@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+*{
+    padding:0px;
+    margin:0px;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+    color:#fff;
+
+}
+
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.invarted {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.toggler {
+    position: absolute;
+    right: 10px;
+}
+
+.chamber {
+    width: 90px;
+    height: 50px;
+    border: 5px solid #353536;
+    border-radius: 20px;
+    position: relative;
+    transition: all 10s ease-in;
+}
+
+.nob {
+    height: 40px;
+    width: 40px;
+    background-color: #353536;
+    border-radius: 50%;
+    border: 1px solid #353536;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+.switch {
+    right: 0px;
+}
+body{
+    background: #f4f4f5;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.calc{
+    width:500px;
+    height:700px;
+    background:#353536;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.screen{
+    width:100%;
+    height:175px;
+    /* padding:5px; */
+    border:1px solid #fff;
+    position: relative;
+    overflow-x:hidden;
+}
+
+.keys{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    /* border:1px solid #fff; */
+    height:500px;
+}
+
+.calc-screen{
+    border:1px solid ;
+    height:30%;
+    text-align: right;
+    font-size:1.5rem;
+    width:100%;
+    background-color: #353536;
+    border:0px;
+}
+
+.calc-screen:focus{
+    outline:none;
+}
+
+.result-screen{
+    text-align: right;
+    padding-top:30px;
+    height:40px;
+    font-size: 3rem;
+    position: absolute;
+    bottom:0px;
+    height:120px;
+    width:100%;
+    background-color: #353536;
+    border:0px;
+    
+
+}
+.result-screen {
+    outline:none;
+
+}
+
+button{
+ 
+    font-weight: 900;
+    font-size: 1.3rem;
+    background-color: inherit;
+}
+
+button:hover{
+    background-color: #494949;
+}
+button:focus{
+    background-color: #353536;
+    outline: none;
+}
+
+@media(max-width:500px){
+    .calc{
+        width:400px;
+    }
+.result-screen {
+    font-size:5rem;
+}
+}
+
+@media(max-width:396px){
+    .calc{
+        width:350px;
+    }
+    .result-screen {
+        font-size: 4rem;
+    }
+}
+
+@media(max-width:360px){
+    .calc{
+      height:650px;
+
+    }
+    .result-screen{
+    font-size: 4rem;
+    height:85px;
+
+    }
+}
